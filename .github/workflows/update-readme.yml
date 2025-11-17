@@ -1,6 +1,6 @@
 name: Auto Update README
 
-# Trigger: on push to Projects folder or scripts, or manually
+# Trigger on push to Projects folder or scripts, or manually
 on:
   push:
     paths:
@@ -13,7 +13,7 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Fixes 403 on git push
+      contents: write  # Important: allows pushing changes
 
     steps:
     - name: Checkout repository
@@ -33,4 +33,10 @@ jobs:
     - name: Update README.md
       run: python generate_readme.py
 
-    - name: Commit
+    - name: Commit and push changes
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git add README.md Projects/*.json
+        git diff --quiet && echo "No changes to commit" || git commit -m "Auto-update README and project JSONs"
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
