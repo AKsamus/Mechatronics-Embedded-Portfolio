@@ -5,13 +5,13 @@ Welcome to my project portfolio repository. Here you will find my work on ESP32,
 ## All Projects
 <!-- PROJECT-LIST-AUTO -->
 
-### Untitled Project
+### auto_read_updater
 
 General project description
 
 **Technologies:** 
 
-### Untitled Project
+### test_proj
 
 General project description
 
