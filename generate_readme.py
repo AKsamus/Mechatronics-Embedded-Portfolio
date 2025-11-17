@@ -15,7 +15,7 @@ for pj in project_jsons:
         data = json.load(f)
     title = data.get("name", "")
     desc = data.get("description", "")
-    techs = ", ".join(data.get("technologies", []))
+    techs = ", ".join(data.get("techs", []))
     
     project_md += f"### {title}\n\n{desc}\n\n**Technologies:** {techs}\n\n"
 
