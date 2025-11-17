@@ -13,7 +13,7 @@ project_md = ""
 for pj in project_jsons:
     with open(os.path.join(PROJECTS_DIR, pj), "r", encoding="utf-8") as f:
         data = json.load(f)
-    title = data.get("title", "Untitled Project")
+    title = data.get("name", "")
     desc = data.get("description", "")
     techs = ", ".join(data.get("technologies", []))
     
