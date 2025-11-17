@@ -8,7 +8,7 @@ projects_root = Path("Projects")
 for project_folder in projects_root.iterdir():
     if project_folder.is_dir():
         # JSON filename = project folder name
-        json_file = f"{projects_root.name}/{project_folder.name}.json"
+        json_file = f"{projects_folder.name}/{project_folder.name}.json"
 
         # Example project data (update as needed)
         project_data = {
