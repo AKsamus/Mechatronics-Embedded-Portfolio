@@ -1,6 +1,11 @@
 {
     "name": "auto_read_updater",
     "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
-    "techs": "ESP32, Raspberry Pi, Python, Other relevant tech",
+    "techs": [
+        "ESP32",
+        "Raspberry Pi",
+        "Python",
+        "Other relevant tech"
+    ],
     "status": "completed"
 }
