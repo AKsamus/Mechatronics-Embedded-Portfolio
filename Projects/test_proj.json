@@ -1,5 +1,6 @@
 {
     "name": "test_proj",
-    "description": "General project description",
+    "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
+    "techs": "ESP32, Raspberry Pi, Python, Other relevant tech",
     "status": "completed"
 }

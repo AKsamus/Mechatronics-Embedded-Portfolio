@@ -7,13 +7,13 @@ Welcome to my project portfolio repository. Here you will find my work on ESP32,
 
 ### auto_read_updater
 
-General project description
+This project showcases technical skills and applied knowledge in engineering, electronics, and software development.
 
 **Technologies:** 
 
 ### test_proj
 
-General project description
+This project showcases technical skills and applied knowledge in engineering, electronics, and software development.
 
 **Technologies:** 
 
