@@ -13,8 +13,8 @@ for project_folder in projects_root.iterdir():
         # Example project data (update as needed)
         project_data = {
             "name": project_folder.name,
-            "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development."
-            "techs": "ESP32, Raspberry Pi, Python, Other relevant tech"
+            "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
+            "techs": "ESP32, Raspberry Pi, Python, Other relevant tech",
             "status": "completed"
         }
 
