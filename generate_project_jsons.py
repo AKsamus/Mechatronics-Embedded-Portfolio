@@ -24,4 +24,4 @@ for project_folder in projects_root.iterdir():
         with open(json_file, "w") as f:
             json.dump(project_data, f, indent=4)
 
-        print(f"Created JSON: {json_file.resolve()}")
+        #print(f"Created JSON: {json_file.resolve()}")
