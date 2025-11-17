@@ -15,6 +15,8 @@ default_status = "Completed"
 
 # Ensure Projects folder exists
 os.makedirs(projects_dir, exist_ok=True)
+print(os.getcwd())
+print(os.listdir(projects_dir))
 
 # Loop over all items in Projects folder
 for project_name in os.listdir(projects_dir):
