@@ -1,42 +1,46 @@
-name: Auto Update README
+name: Update README and Project JSONs
 
-# Trigger on push to Projects folder or scripts, or manually
 on:
   push:
-    paths:
-      - 'Projects/**'
-      - 'generate_project_jsons.py'
-      - 'generate_readme.py'
-  workflow_dispatch:
+    branches:
+      - main
+  workflow_dispatch: # allows manual trigger
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # Important: allows pushing changes
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      # Step 1: Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    - name: Install dependencies
-      run: python -m pip install --upgrade pip
+      # Step 3: Install dependencies if any
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Add any required packages if you use them
+          # Example: pip install pandas
 
-    - name: Generate project JSONs
-      run: python generate_project_jsons.py
+      # Step 4: Run JSON + README generator script
+      - name: Generate Project JSONs and Update README
+        run: |
+          python generate_project_jsons.py
+          python update_readme.py
 
-    - name: Update README.md
-      run: python generate_readme.py
-
-    - name: Commit and push changes
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add README.md Projects/*.json
-        git diff --quiet && echo "No changes to commit" || git commit -m "Auto-update README and project JSONs"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      # Step 5: Commit and push changes if any
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add Projects/*.json README.md
+          git diff --cached --quiet || git commit -m "Auto-update project JSONs and README"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
