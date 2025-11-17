@@ -32,7 +32,7 @@ jobs:
       - name: Generate Project JSONs and Update README
         run: |
           python generate_project_jsons.py
-          python update_readme.py
+          python generate_readme.py
 
       # Step 5: Commit and push changes if any
       - name: Commit and push changes
