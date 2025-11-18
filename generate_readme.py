@@ -1,7 +1,7 @@
 import os
 import json
 
-PROJECTS_DIR = "Projects/Project_JSON"
+PROJECTS_DIR = "Projects"
 README_FILE = "README.md"
 PLACEHOLDER = "<!-- PROJECT-LIST-AUTO -->"
 
