@@ -11,12 +11,6 @@ This project showcases technical skills and applied knowledge in engineering, el
 
 **Technologies:** ESP32, Raspberry Pi, Python, Other relevant tech
 
-### test_proj
-
-This project showcases technical skills and applied knowledge in engineering, electronics, and software development.
-
-**Technologies:** ESP32, Raspberry Pi, Python, Other relevant tech
-
 ### ESP_test_ground
 
 This project showcases technical skills and applied knowledge in engineering, electronics, and software development.
