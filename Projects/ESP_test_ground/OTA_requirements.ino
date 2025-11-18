@@ -2,8 +2,8 @@
 #include <ArduinoOTA.h>
 
 // Replace with your Wi-Fi credentials
-const char* ssid = "AK2G";
-const char* password = "1234567890";
+const char* ssid="***";
+const char* password="***";
 const int ledPin = 2;
 
 void setup() {
