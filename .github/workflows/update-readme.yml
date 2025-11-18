@@ -2,8 +2,11 @@ name: Update README and Project JSONs
 
 on:
   push:
-    branches:
-      - main
+    branches: # trigger on all branches
+      - '**'   # double asterisk matches all branches
+  pull_request:
+    branches: # trigger on all branches
+      - '**'   # double asterisk matches all branches
   workflow_dispatch: # allows manual trigger
 
 permissions:
