@@ -2,8 +2,8 @@
 #include <WebServer.h>
 
 // Replace with your network credentials
-const char *ssid = "TuBhiLele";
-const char *password = "TuBhiLele2";
+const char *ssid="***";
+const char *password="***";
 
 // Create a web server object
 WebServer server(80);
