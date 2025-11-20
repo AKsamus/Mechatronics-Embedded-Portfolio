@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-const char* ssid = "AK2G";//"TuBhiLele"       // Wi-Fi network name
-const char* password = "1234567890";//"TuBhiLele2" // Wi-Fi network password
+const char* ssid="***"       // Wi-Fi network name
+const char* password="***" // Wi-Fi network password
 
 void setup() {
   Serial.begin(115200);

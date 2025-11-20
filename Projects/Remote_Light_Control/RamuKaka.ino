@@ -3,8 +3,8 @@
 #include <ESP32Servo.h>
 
 // Replace with your network credentials
-const char *ssid = "AK2G";
-const char *password = "1234567890";
+const char *ssid="***";
+const char *password="***";
 
 WebServer server(80);
 Servo myServo;
