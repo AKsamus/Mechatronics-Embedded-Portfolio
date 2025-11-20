@@ -42,12 +42,16 @@ jobs:
           python generate_readme.py
 
       # Step 5: Commit and push changes if any
-      - name: Commit and push changes
+      - name: Commit and force push changes
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Stage changes and commit
           git add Projects/*.json README.md
           git diff --cached --quiet || git commit -m "Auto-update project JSONs and README"
-          git push
+          
+          # Force push the changes, replacing remote with local
+          git push origin main --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
