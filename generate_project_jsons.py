@@ -24,7 +24,7 @@ for project_folder in projects_root.iterdir():
             project_folder.mkdir(parents=True, exist_ok=True)
 
             # Write JSON
-            with open(json_file, "w") as f:
+            with open(file_path, "w") as f:
                 json.dump(project_data, f, indent=4)
 
             #print(f"Created JSON: {json_file.resolve()}")
