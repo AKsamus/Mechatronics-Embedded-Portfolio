@@ -1,6 +1,6 @@
 {
     "name": "ESP_test_ground",
-    "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
+    "description": "Sandbox enviornment to test EPS functionalities.",
     "techs": [
         "ESP32",
         "SG 90 Servo Motor",

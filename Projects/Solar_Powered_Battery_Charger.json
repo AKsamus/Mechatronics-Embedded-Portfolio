@@ -1,6 +1,6 @@
 {
     "name": "Solar_Powered_Battery_Charger",
-    "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
+    "description": "Attempt to charge Li-ion battery using green energy.",
     "techs": [
         "Soldering",
         "Basic Electronics",

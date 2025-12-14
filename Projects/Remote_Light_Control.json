@@ -1,6 +1,6 @@
 {
     "name": "Remote_Light_Control",
-    "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
+    "description": "Secure switch operation over internet.",
     "techs": [
         "ESP32",
         "Raspberry Pi",

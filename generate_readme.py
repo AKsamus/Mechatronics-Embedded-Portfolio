@@ -17,7 +17,7 @@ for pj in project_jsons:
     desc = data.get("description", "")
     techs = ", ".join(data.get("techs", []))
     
-    project_md += f"### {title}\n\n{desc}\n\n**Technologies:** {techs}\n\n"
+    project_md += f"### {title}\n\n{desc}\n**Technologies:** {techs}\n\n"
 
 # Read existing README
 with open(README_FILE, "r", encoding="utf-8") as f:
