@@ -8,21 +8,23 @@ projects_root = Path("Projects")
 for project_folder in projects_root.iterdir():
     if project_folder.is_dir():
         # JSON filename = project folder name
-        json_file = f"{projects_root.name}/{project_folder.name}.json"
+        file_path = f"{projects_root.name}/{project_folder.name}.json"
+        if Path(file_path).exists():
+            continue  # Skip if JSON already exists
+        else:
+            # Example project data (update as needed)
+            project_data = {
+                "name": project_folder.name,
+                "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
+                "techs": [],
+                "status": "In Progress"
+            }
 
-        # Example project data (update as needed)
-        project_data = {
-            "name": project_folder.name,
-            "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
-            "techs": ["ESP32", "Raspberry Pi", "Python", "Other relevant tech"],
-            "status": "completed"
-        }
+            # Ensure folder exists (safety)
+            project_folder.mkdir(parents=True, exist_ok=True)
 
-        # Ensure folder exists (safety)
-        project_folder.mkdir(parents=True, exist_ok=True)
+            # Write JSON
+            with open(json_file, "w") as f:
+                json.dump(project_data, f, indent=4)
 
-        # Write JSON
-        with open(json_file, "w") as f:
-            json.dump(project_data, f, indent=4)
-
-        #print(f"Created JSON: {json_file.resolve()}")
+            #print(f"Created JSON: {json_file.resolve()}")
