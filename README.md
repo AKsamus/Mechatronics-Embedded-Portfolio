@@ -9,17 +9,17 @@ Welcome to my project portfolio repository. Here you will find my work on ESP32,
 
 This project showcases technical skills and applied knowledge in engineering, electronics, and software development.
 
-**Technologies:** ESP32, Raspberry Pi, Python, Other relevant tech
+**Technologies:** Soldering, Basic Electronics, TP4056 Battery Charging Module, Regulated Power Supply, Solar Energy, Circuit Design, Li-Ion Batteries
 
 ### Remote_Light_Control
 
 This project showcases technical skills and applied knowledge in engineering, electronics, and software development.
 
-**Technologies:** ESP32, Raspberry Pi, Python, Other relevant tech
+**Technologies:** ESP32, Raspberry Pi, Python, VPN, SG 90 Servo Motor, 3D Printing, Web Server hosting
 
 ### ESP_test_ground
 
 This project showcases technical skills and applied knowledge in engineering, electronics, and software development.
 
-**Technologies:** ESP32, Raspberry Pi, Python, Other relevant tech
+**Technologies:** ESP32, SG 90 Servo Motor, Wifi Connectivity, OTA Updates, Ultrasonic Sensor, Microcontroller Programming, Circuit Design, Web Server hosting
 
