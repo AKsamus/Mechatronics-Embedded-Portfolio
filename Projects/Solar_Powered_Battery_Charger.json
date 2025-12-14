@@ -2,10 +2,13 @@
     "name": "Solar_Powered_Battery_Charger",
     "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
     "techs": [
-        "ESP32",
-        "Raspberry Pi",
-        "Python",
-        "Other relevant tech"
+        "Soldering",
+        "Basic Electronics",
+        "TP4056 Battery Charging Module",
+        "Regulated Power Supply",
+        "Solar Energy",
+        "Circuit Design",
+        "Li-Ion Batteries"
     ],
     "status": "completed"
 }

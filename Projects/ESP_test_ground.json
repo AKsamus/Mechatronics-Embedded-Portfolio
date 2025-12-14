@@ -3,9 +3,13 @@
     "description": "This project showcases technical skills and applied knowledge in engineering, electronics, and software development.",
     "techs": [
         "ESP32",
-        "Raspberry Pi",
-        "Python",
-        "Other relevant tech"
+        "SG 90 Servo Motor",
+        "Wifi Connectivity",
+        "OTA Updates",
+        "Ultrasonic Sensor",
+        "Microcontroller Programming",
+        "Circuit Design",
+        "Web Server hosting"
     ],
     "status": "completed"
 }

@@ -5,7 +5,10 @@
         "ESP32",
         "Raspberry Pi",
         "Python",
-        "Other relevant tech"
+        "VPN",
+        "SG 90 Servo Motor",
+        "3D Printing",
+        "Web Server hosting"
     ],
     "status": "completed"
 }
