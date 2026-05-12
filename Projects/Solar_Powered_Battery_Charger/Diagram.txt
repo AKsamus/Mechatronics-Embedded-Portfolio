@@ -1,0 +1,119 @@
+SIMPLE SOLAR LITHIUM BATTERY CHARGER
+====================================
+
+COMPONENTS
+==========
+
+1x Solar Panel      = 9V 100mA
+1x 7805 Regulator   = 5V regulator IC
+1x TP4056 Module    = Li-ion charger module
+1x Li-ion Battery   = 3.7V 1200mAh
+2x Capacitors       = 0.33uF and 0.1uF
+1x Diode            = 1N5819 Schottky (recommended)
+
+------------------------------------------------------------
+CONNECTION DIAGRAM
+------------------------------------------------------------
+
+      +----------------------+
+      |    SOLAR PANEL       |
+      |      9V 100mA        |
+      +----------------------+
+             |         |
+            (+)       (-)
+             |         |
+             |         +----------------------+
+             |                                |
+          |>| D1                              |
+        1N5819                                |
+             |                                |
+             |                               GND
+         +--------+
+         | 7805   |
+         |        |
+ IN -----|1    3|------ OUT +5V
+ GND ----|2      |
+         +--------+
+             |
+            GND
+
+CAPACITORS:
+============
+
+0.33uF between 7805 IN and GND
+0.1uF  between 7805 OUT and GND
+
+------------------------------------------------------------
+TP4056 CONNECTION
+------------------------------------------------------------
+
+7805 OUT (+5V)  ---> TP4056 IN+
+GND             ---> TP4056 IN-
+
+Battery +       ---> TP4056 B+
+Battery -       ---> TP4056 B-
+
+LOAD (optional):
+================
+
+Device +         ---> TP4056 OUT+
+Device -         ---> TP4056 OUT-
+
+------------------------------------------------------------
+FULL POWER FLOW
+------------------------------------------------------------
+
+Solar Panel
+    ↓
+1N5819 Diode
+    ↓
+7805 Regulator
+    ↓ 5V
+TP4056 Charger
+    ↓
+3.7V Li-ion Battery
+
+------------------------------------------------------------
+IMPORTANT NOTES
+------------------------------------------------------------
+
+1. 7805 may get warm; small heatsink recommended.
+2. 9V 100mA panel charges slowly.
+3. TP4056 default charge current is often 1A.
+4. Your panel can only supply about 100mA maximum.
+5. Change TP4056 charge resistor if needed.
+
+------------------------------------------------------------
+TP4056 CURRENT SETTING
+------------------------------------------------------------
+
+Default resistor:
+RPROG = 1.2k = 1000mA charge current
+
+For solar panel 100mA:
+Use approximately 10k resistor for ~130mA charging.
+
+Recommended:
+Replace RPROG with 10k resistor.
+
+------------------------------------------------------------
+CHARGE TIME ESTIMATE
+------------------------------------------------------------
+
+1200mAh battery
+Charging current ≈ 80–100mA
+
+Estimated full charge:
+12–16 hours of good sunlight
+
+------------------------------------------------------------
+SAFETY
+------------------------------------------------------------
+
+DO NOT:
+- connect battery backwards
+- use damaged lithium cells
+- leave system in high heat
+- bypass TP4056 protection
+
+END
